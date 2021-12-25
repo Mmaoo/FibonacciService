@@ -1,5 +1,6 @@
 const keys = require('./keys');
 const redis = require('redis');
+const fibonacci = require('./fibonacci').fibonacci;
 
 const redisClient = redis.createClient({
   host: keys.redisHost,
@@ -14,6 +15,6 @@ function fib(index) {
 }
 
 sub.on('message', (channel, message) => {
-  redisClient.hset('values', message, fib(parseInt(message)));
+  redisClient.hset('values', message, fibonacci(parseInt(message)));
 });
 sub.subscribe('insert');
