@@ -2,29 +2,24 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import OtherPage from './OtherPage';
-import Fib from './Fib';
+import DocumentationPage from './DocumentationPage';
+import FibonacciPage from './FibonacciPage';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React 3
-          </a>
-          <Link to="/">Home</Link>
-          <Link to="/otherpage">Other Page</Link>
+          <h2>Realizacja zadania nr 1 w ramach laboratorum PFSwChO<br /><br />
+          Marcin Choina</h2>
+          <div class="App-menu">
+            <li><Link to="/">Fibonacci</Link></li>
+            <li><Link to="/documentation">Dokumentacja</Link></li>
+          </div>
         </header>
-        <div>
-          <Route exact path="/" component={Fib} />
-          <Route path="/otherpage" component={OtherPage} />
+        <div class="App-content">
+          <Route exact path="/" component={FibonacciPage} />
+          <Route path="/documentation" component={DocumentationPage} />
         </div>
       </div>
     </Router>
