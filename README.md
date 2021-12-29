@@ -1,13 +1,6 @@
-import React from 'react';
-import model from './model.jpg';
-import service0 from './service0.jpg';
-import service10 from './service10.jpg';
-
-export default () => {
-  return (
-    <div>
+<div>
       <h2>Dokumentacja</h2>
-      <img src={model} alt="model" />
+      <img src="./client/src/model.jpg" alt="model" />
     <p class="align-left">
     Aplikacja bazuje na podstawie usługi z lab9 i składa się z mikrousług:
     <ul>
@@ -34,8 +27,6 @@ docker compose -f docker-compose.dev.yml up <br />
 Działająca usługa:
 
 </p>
-<img src={service0} alt="service0" />
-<img src={service10} alt="service10" class="img-border"/>
+<img src="./client/src/service0.jpg" alt="service0" />
+<img src="./client/src/service10.jpg" alt="service10" class="img-border"/>
     </div>
-  );
-};

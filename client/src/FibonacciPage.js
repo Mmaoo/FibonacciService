@@ -99,7 +99,7 @@ class FibonacciPage extends Component {
             value={this.state.index}
             onChange={(event) => this.setState({ index: event.target.value })}
           />
-          <button>Submit</button>
+          <button>Wyślij</button>
         </form>
 
 	<h3>Historia:</h3>
