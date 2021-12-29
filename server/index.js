@@ -21,7 +21,7 @@ const pgClient = new Pool({
 
 pgClient.on("connect", (client) => {
   client
-    .query("CREATE TABLE IF NOT EXISTS values (number INT)")
+    .query("CREATE TABLE IF NOT EXISTS values (number INT, created TIMESTAMP)")
     .catch((err) => console.error(err));
 });
 
@@ -46,6 +46,11 @@ app.get("/values/all", async (req, res) => {
   res.send(values.rows);
 });
 
+app.get("/values/last", async (req, res) => {
+  const indexes = await pgClient.query("SELECT * from values order by created desc limit 10");
+  res.send(indexes.rows);
+});
+
 app.get("/values/current", async (req, res) => {
   redisClient.hgetall("values", (err, values) => {
     res.send(values);
@@ -61,7 +66,8 @@ app.post("/values", async (req, res) => {
 
   redisClient.hset("values", index, "Nothing yet!");
   redisPublisher.publish("insert", index);
-  pgClient.query("INSERT INTO values(number) VALUES($1)", [index]);
+  const created = new Date(Date.now()).toISOString();
+  pgClient.query("INSERT INTO values(number,created) VALUES($1,$2)", [index,created],);
 
   res.send({ working: true });
 });
