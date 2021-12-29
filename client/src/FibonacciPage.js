@@ -53,6 +53,7 @@ class FibonacciPage extends Component {
       index: this.state.index,
     });
     this.setState({ index: '' });
+    this.fetchLastValues();
   };
 
   renderSeenIndexes() {
@@ -92,8 +93,9 @@ class FibonacciPage extends Component {
       <div>
         <h2>Fibonacci</h2>
         <form onSubmit={this.handleSubmit}>
-          <label>Enter your index:</label>
+          <label>Wprowadź liczbę k: </label>
           <input
+            type="number" min="0" max="20"
             value={this.state.index}
             onChange={(event) => this.setState({ index: event.target.value })}
           />
@@ -108,12 +110,6 @@ class FibonacciPage extends Component {
         {this.renderLastValues()}
 	</tbody></table>
 	</div>
-	
-        <h3>Indexes I have seen:</h3>
-        {this.renderSeenIndexes()}
-
-        <h3>Calculated Values:</h3>
-        {this.renderValues()}
       </div>
     );
   }
