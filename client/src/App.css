@@ -55,12 +55,14 @@
   background-color: #000062;
   color: white;
   text-decoration: none;
+  border: 1px solid #000000;
 }
 
 .App-menu > li a:hover{
   background-color: white;
   color: black;
   text-decoration: none;
+  border: 1px solid #000062;
 }
 
 .App-content{
@@ -76,6 +78,47 @@
 .App-content img{
   width: 100%;
   max-width: 500px;
+  margin: 10px auto;
+}
+
+.App-content a{
+    display: block;
+    width: 100px;
+    height: 25px;
+    background: #000062;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    line-height: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px auto;
+}
+
+.App-content a:hover{
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #000062;
+}
+
+.App-content button{
+    width: 100px;
+    height: 25px;
+    background: #000062;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px auto;
+}
+
+.App-content button:hover{
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #000062;
 }
 
 .align-left{

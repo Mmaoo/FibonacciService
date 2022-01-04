@@ -46,8 +46,14 @@ app.get("/values/all", async (req, res) => {
   res.send(values.rows);
 });
 
-app.get("/values/last", async (req, res) => {
-  const indexes = await pgClient.query("SELECT * from values order by created desc limit 10");
+app.get("/values/last/:limit", async (req, res) => {
+  const limit = req.params.limit;
+  if(limit == null) limit = 10;
+  if(isNaN(parseInt(limit)) || parseInt(limit) < 1){
+    return res.status(422).send("Invalid index");
+  }
+  
+  const indexes = await pgClient.query("SELECT * from values order by created desc limit "+parseInt(limit));
   res.send(indexes.rows);
 });
 

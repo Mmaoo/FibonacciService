@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import DocumentationPage from './DocumentationPage';
 import FibonacciPage from './FibonacciPage';
+import FibonacciHistoryPage from './FibonacciHistoryPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <div class="App-content">
           <Route exact path="/" component={FibonacciPage} />
           <Route path="/documentation" component={DocumentationPage} />
+          <Route path="/history" component={FibonacciHistoryPage} />
         </div>
       </div>
     </Router>

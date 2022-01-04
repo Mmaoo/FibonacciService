@@ -2,6 +2,8 @@ import React from 'react';
 import model from './model.jpg';
 import service0 from './service0.jpg';
 import service10 from './service10.jpg';
+import service11 from './service11.jpg';
+import service20 from './service20.jpg';
 
 export default () => {
   return (
@@ -21,21 +23,25 @@ export default () => {
     </p>
     <p class="align-left">
 Zmiany
+<ul>
 <li>W mikrousłudze dodano własną funkcję obliczającą wartości ciągu utworzoną dla lab8 (worker/fibonacci.js)</li>
 <li>Zmieniono strukturę bazy postgres tak aby zawierała indeks ciągu oraz datę dodania elementu</li>
 <li>Do api dodano funkcje pobierania ostatnich 10 indeksów z bazy na podstawie daty dodania rekordów</li>
 <li>Zabezpieczono api przed dodaniem niepoprawnych indeksów do bazy</li>
-<li>W kliencie zmieniono stronę główną, dodano menu i stronę dokumentacji, a także na stronie kalkulatora dodano historę zawierającą 10 ostatnich wprowadzonych wartości k wraz z obliczoną wartością elementu ciągu</li>
+<li>W kliencie zmieniono stronę główną, dodano menu i stronę dokumentacji, a także na stronie kalkulatora dodano odnośnik do strony zawierającej 10 ostatnich wprowadzonych wartości k wraz z obliczoną wartością elementu ciągu</li>
+</ul>
 </p>
 <p class="align-left">
 Usługę można uruchomić do pracy na etapie rozwoju za pomocą polecenia: <br />
-docker compose -f docker-compose.dev.yml up <br />
+docker compose -f docker-compose.dev.yml up <br /><br />
 
 Działająca usługa:
 
 </p>
 <img src={service0} alt="service0" />
-<img src={service10} alt="service10" class="img-border"/>
+<img src={service10} alt="service10" class="img-border" />
+<img src={service11} alt="service11" class="img-border" />
+<img src={service20} alt="service20" class="img-border" />
     </div>
   );
 };
