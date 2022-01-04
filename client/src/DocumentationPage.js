@@ -33,10 +33,10 @@ Zmiany
 </p>
 <p class="align-left">
 Usługę można uruchomić do pracy na etapie rozwoju za pomocą polecenia: <br />
-docker compose -f docker-compose.dev.yml up <br /><br />
+docker compose -f docker-compose.dev.yml up <br />
+Dostęp do usługi jest możliwy na porcie 3050 <br /><br />
 
 Działająca usługa:
-
 </p>
 <img src={service0} alt="service0" />
 <img src={service10} alt="service10" class="img-border" />

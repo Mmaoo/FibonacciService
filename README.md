@@ -18,15 +18,18 @@ Zmiany
 <li>Zmieniono strukturę bazy postgres tak aby zawierała indeks ciągu oraz datę dodania elementu</li>
 <li>Do api dodano funkcje pobierania ostatnich 10 indeksów z bazy na podstawie daty dodania rekordów</li>
 <li>Zabezpieczono api przed dodaniem niepoprawnych indeksów do bazy</li>
-<li>W kliencie zmieniono stronę główną, dodano menu i stronę dokumentacji, a także na stronie kalkulatora dodano historę zawierającą 10 ostatnich wprowadzonych wartości k wraz z obliczoną wartością elementu ciągu</li>
+<li>W kliencie zmieniono stronę główną, dodano menu i stronę dokumentacji, a także na stronie kalkulatora dodano odnośnik do strony zawierającej 10 ostatnich wprowadzonych wartości k wraz z obliczoną wartością elementu ciągu</li>
 </p>
 <p class="align-left">
 Usługę można uruchomić do pracy na etapie rozwoju za pomocą polecenia: <br />
 docker compose -f docker-compose.dev.yml up <br />
+Dostęp do usługi jest możliwy na porcie 3050 <br /><br />
 
 Działająca usługa:
 
 </p>
 <img src="./client/src/service0.jpg" alt="service0" />
-<img src="./client/src/service10.jpg" alt="service10" class="img-border"/>
+<img src="./client/src/service10.jpg" alt="service10" class="img-border" />
+<img src="./client/src/service11.jpg" alt="service11" class="img-border" />
+<img src="./client/src/service20.jpg" alt="service20" class="img-border" />
     </div>
